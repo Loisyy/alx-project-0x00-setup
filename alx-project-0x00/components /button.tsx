@@ -1,5 +1,12 @@
 import React from "react";
-import { ButtonProps } from "../interfaces/Button.interface";
+
+// Interface INSIDE this file
+interface ButtonProps {
+  title: string;
+  size?: "small" | "medium" | "large";
+  shape?: "rounded-sm" | "rounded-md" | "rounded-full";
+  className?: string;
+}
 
 const Button: React.FC<ButtonProps> = ({
   title,
@@ -16,7 +23,12 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`bg-blue-600 text-white ${sizeClasses[size]} ${shape} ${className}`}
+      className={`
+        ${sizeClasses[size]}
+        ${shape}
+        font-medium bg-blue-500 text-white
+        ${className}
+      `}
     >
       {title}
     </button>

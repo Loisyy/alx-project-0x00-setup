@@ -1,11 +1,15 @@
-import { PillProps } from "@/interfaces";
+import React from "react";
+
+interface PillProps {
+  title: string;
+}
 
 const Pill: React.FC<PillProps> = ({ title }) => {
   return (
-    <div className=" flex justify-center  items-center bg-[#F9F9F9] px-3 w-auto h-[27px] rounded-full">
-      <p className=" text-sm ">Title</p>
-    </div>
-  )
-}
+    <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">
+      {title}
+    </span>
+  );
+};
 
 export default Pill;

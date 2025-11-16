@@ -1,35 +1,38 @@
-import Card from "@/components /Card";
-import Button from "@/components /button";
+import Card from "@/components/Card";
+import Button from "@/components/Button";
 
 const Landing: React.FC = () => {
-    return (
-        <div>
-            <h1 className="text-xl font-extralarge">Landing page</h1>
-            <Card />
-             <h1 className="text-3xl font-bold">Button Component Demo</h1>
+  return (
+    <div className="p-6">
 
-      {/* Small Buttons */}
-      <div className="flex gap-4">
-        <Button title="Small Sm" size="small" shape="rounded-sm" />
-        <Button title="Small Md" size="small" shape="rounded-md" />
-        <Button title="Small Full" size="small" shape="rounded-full" />
-      </div>
+      <h1 className="text-xl font-bold">Landing Page</h1>
+      <Card />
 
-      {/* Medium Buttons */}
-      <div className="flex gap-4">
-        <Button title="Medium Sm" size="medium" shape="rounded-sm" />
-        <Button title="Medium Md" size="medium" shape="rounded-md" />
-        <Button title="Medium Full" size="medium" shape="rounded-full" />
-      </div>
+      <h1 className="text-3xl font-bold mt-6">Button Component Demo</h1>
 
-      {/* Large Buttons */}
-      <div className="flex gap-4">
-        <Button title="Large Sm" size="large" shape="rounded-sm" />
-        <Button title="Large Md" size="large" shape="rounded-md" />
-        <Button title="Large Full" size="large" shape="rounded-full" />
-      </div>
-        </div>
-    )
-}
+      <Button
+        title="Small"
+        size="small"
+        shape="rounded-sm"
+        className="mt-3"
+      />
 
-export default Landing; 
+      <Button
+        title="Medium"
+        size="medium"
+        shape="rounded-md"
+        className="mt-3"
+      />
+
+      <Button
+        title="Large"
+        size="large"
+        shape="rounded-full"
+        className="mt-3"
+      />
+
+    </div>
+  );
+};
+
+export default Landing;
