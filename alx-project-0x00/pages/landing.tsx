@@ -1,37 +1,33 @@
+// pages/landing.tsx
+import React from "react";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
 
-
 const Landing: React.FC = () => {
   return (
-    <div className="p-6">
-
-      <h1 className="text-xl font-bold">Landing Page</h1>
+    <div>
+      <h1 className="text-xl font-extralarge">Landing page</h1>
       <Card />
-
-      <h1 className="text-3xl font-bold mt-6">Button Component Demo</h1>
-
-      <Button
-        title="Small"
-        size="small"
-        shape="rounded-sm"
-        className="mt-3"
-      />
+      <h1 className="text-3xl font-bold mt-4">Button Component Demo</h1>
 
       <Button
-        title="Medium"
-        size="medium"
-        shape="rounded-md"
-        className="mt-3"
-      />
-
-      <Button
-        title="Large"
+        title="Get Started"
         size="large"
         shape="rounded-full"
-        className="mt-3"
+        styles="font-medium text-[17px] ml-2"
       />
-
+      <Button
+        title="Learn More"
+        size="medium"
+        shape="rounded-md"
+        styles="font-medium text-[17px]"
+      />
+      <Button
+        title="Subscribe"
+        size="small"
+        shape="rounded-sm"
+        styles="font-medium text-[14px]"
+      />
     </div>
   );
 };
